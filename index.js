@@ -6,6 +6,8 @@ function moveDodgerLeft() {
   
     if (left > 0) {
       dodger.style.left = `${left - 1}px`;
+    } else{
+      dodger.style.left = `${left}px`; // prevents the dodger from exiting the window
     }
 }
   
@@ -23,8 +25,10 @@ function moveDodgerRight(){
     const left = parseInt(leftNumbers, 10);
 
 
-    if (left > 0) {
+    if (left < 360) {
         dodger.style.left = `${left + 1}px`;
+    } else{
+        dodger.style.left = `${left}px`;  // prevents the dodger from exiting the window
     }
 }
 
